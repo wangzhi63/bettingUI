@@ -1,7 +1,14 @@
 <div *ngIf="isAuthenticated; else notAuthenticated">
     <p>Welcome, {{ user?.name }}!</p>
     <p>Email: {{ user?.email }}</p>
+
+    
+<div>
+    <h2>Contracts</h2>
+    <app-contract-list></app-contract-list>
 </div>
+</div>
+
 <ng-template #notAuthenticated>
     <p>Authentication failed. Please try again.</p>
 </ng-template>

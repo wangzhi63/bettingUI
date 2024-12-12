@@ -1,21 +1,4 @@
-// import { NgModule } from '@angular/core';
-// import { BrowserModule } from '@angular/platform-browser';
 
-// import { AppRoutingModule } from './app-routing.module';
-// import { AppComponent } from './app.component';
-
-// @NgModule({
-//   declarations: [
-//     AppComponent
-//   ],
-//   imports: [
-//     BrowserModule,
-//     AppRoutingModule
-//   ],
-//   providers: [],
-//   bootstrap: [AppComponent]
-// })
-// export class AppModule { }
 
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -26,6 +9,8 @@ import { OAuthModule, OAuthService } from 'angular-oauth2-oidc';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { ContractListComponent } from './contract/contract-list/contract-list.component';
+import { ContractService } from './contract/contract.service';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -36,7 +21,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    ContractListComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +30,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     OAuthModule.forRoot()
   ],
-  providers: [],
+  providers: [ContractService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

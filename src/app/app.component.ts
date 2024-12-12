@@ -1,39 +1,10 @@
-// import { Component } from '@angular/core';
 
-// @Component({
-//   selector: 'app-root',
-//   templateUrl: './app.component.html',
-//   styleUrls: ['./app.component.scss']
-// })
-// export class AppComponent {
-//   title = 'bettingUI';
-// }
-
-// import { Component, OnInit } from '@angular/core';
-// import { OAuthService } from 'angular-oauth2-oidc';
-// import { authConfig } from './auth.config';
-
-// @Component({
-//   selector: 'app-root',
-//   template: '<router-outlet></router-outlet>'
-// })
-// export class AppComponent implements OnInit {
-
-//   constructor(private oauthService: OAuthService) {
-//     this.oauthService.configure(authConfig);
-//     this.oauthService.loadDiscoveryDocumentAndTryLogin();
-//   }
-
-//   ngOnInit() {
-//     if (!this.oauthService.hasValidAccessToken()) {
-//       this.oauthService.initImplicitFlow();
-//     }
-//   }
-// }
 
 import { Component, OnInit } from '@angular/core';
 import { OAuthService } from 'angular-oauth2-oidc';
 import { authConfig } from './auth.config';
+
+
 
 @Component({
   selector: 'app-root',
