@@ -1,8 +1,8 @@
 <div *ngFor="let contract of contracts">
-    <p>ID: {{ contract.id }}</p>
-    <p>Title: {{ contract.title }}</p>
-    <p>Description: {{ contract.description }}</p>
-    <p>Assertion Text: {{ contract.assertionText }}</p>
-    <p>Start Date: {{ contract.startDate }}</p>
-    <p>End Date: {{ contract.endDate }}</p>
+
+    <p>Bid on: {{ contract.assertionText }}</p>
+
+    <p>Expiring: {{ contract.endDate }}</p>
+
+    <button [routerLink]="['/bid', contract.id]">Bid</button>
 </div>

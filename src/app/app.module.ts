@@ -11,6 +11,9 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ContractListComponent } from './contract/contract-list/contract-list.component';
 import { ContractService } from './contract/contract.service';
+import { BidComponent } from './bid/bid.component';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,13 +25,16 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    ContractListComponent
+    ContractListComponent,
+    BidComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
-    OAuthModule.forRoot()
+    OAuthModule.forRoot(),
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [ContractService],
   bootstrap: [AppComponent]

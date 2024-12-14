@@ -1,5 +1,5 @@
 export interface Contract {
-    id: number;
+    id?: number;
     title: string;
     description: string;
     assertionText: string;

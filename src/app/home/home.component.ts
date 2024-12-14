@@ -43,6 +43,7 @@ import { User } from '../user/user.model';
 export class HomeComponent implements OnInit {
   isAuthenticated: boolean = false;
   user: any;
+  returnedUser: any;
 
   constructor(private oauthService: OAuthService, private userService: UserService) {}
 
@@ -73,11 +74,13 @@ export class HomeComponent implements OnInit {
   saveUserToBackend(userClaims: any): void {
     const user: User = {
       username: userClaims.preferred_username || userClaims.name,
-      email: userClaims.email
+      email: userClaims.email,
     };
 
     this.userService.saveUser(user).subscribe(
       response => {
+        this.returnedUser = response;
+        localStorage.setItem('user_id', this.returnedUser.id.toString());
         console.log('User saved successfully', response);
       },
       error => {

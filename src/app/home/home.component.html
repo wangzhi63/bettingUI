@@ -1,6 +1,9 @@
 <div *ngIf="isAuthenticated; else notAuthenticated">
     <p>Welcome, {{ user?.name }}!</p>
     <p>Email: {{ user?.email }}</p>
+    <p>UserId: {{user?.id}}</p>
+
+    <div>{{returnedUser | json}}</div>
 
     
 <div>

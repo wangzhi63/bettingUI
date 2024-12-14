@@ -1,0 +1,18 @@
+<form (ngSubmit)="onSubmit()">
+    <div>
+        <label>
+            <input type="radio" name="action" value="long" [(ngModel)]="bid.action" required>
+            Long
+        </label>
+        <label>
+            <input type="radio" name="action" value="short" [(ngModel)]="bid.action" required>
+            Short
+        </label>
+    </div>
+    <div>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" [(ngModel)]="bid.amount" required>
+    </div>
+
+    <button type="submit">Submit Bid</button>
+</form>
