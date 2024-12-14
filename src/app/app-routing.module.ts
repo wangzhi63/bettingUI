@@ -7,8 +7,8 @@ import { ContractListComponent } from './contract/contract-list/contract-list.co
 
 const routes: Routes = [
   { path: 'contracts', component: ContractListComponent },
-  { path: 'bid/:contract_id', component: BidComponent },
-  { path: '', redirectTo: '/contracts', pathMatch: 'full' }
+  { path: 'bid/:contract_id', component: BidComponent }
+
 ];
 
 @NgModule({
