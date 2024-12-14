@@ -13,7 +13,7 @@ import { ContractListComponent } from './contract/contract-list/contract-list.co
 import { ContractService } from './contract/contract.service';
 import { BidComponent } from './bid/bid.component';
 import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
+// import { AppRoutingModule } from './app-routing.module';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -33,8 +33,8 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
     OAuthModule.forRoot(),
-    FormsModule,
-    AppRoutingModule
+    FormsModule
+    // AppRoutingModule
   ],
   providers: [ContractService],
   bootstrap: [AppComponent]
