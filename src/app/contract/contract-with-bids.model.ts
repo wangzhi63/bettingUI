@@ -4,5 +4,7 @@ export interface ContractWithBids {
     endDate: string;
     longAmount: number;
     shortAmount: number;
+    longCount: number;
+    shortCount: number;
 
 }

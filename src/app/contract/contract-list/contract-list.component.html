@@ -4,9 +4,11 @@
 
     <p>Expiring: {{ contract.endDate }}</p>
 
-    <p>Long: {{ contract.longAmount }}</p>
+    <p>Long: ${{ contract.longAmount }} ({{contract.longCount}})</p>
     
-    <p>Short: {{ contract.shortAmount }}</p>
+    <p>Short: ${{ contract.shortAmount }} ({{contract.shortCount}})</p>
+
+
 
     <button [routerLink]="['/bid', contract.id]">Bid</button>
 </div>
