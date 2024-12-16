@@ -1,10 +1,38 @@
+
 <div *ngIf="isAuthenticated; else notAuthenticated">
     <p>Welcome, {{ user?.name }}!</p>
-<div>
-    <h2>Contracts</h2>
-    <app-contract-list></app-contract-list>
-</div>
-</div>
+ </div>
+
+
+
+
+<mat-tab-group>
+    <mat-tab label="Contract List">
+     <div *ngIf="isAuthenticated; else notAuthenticated">
+      <div>
+        <h2>Contracts</h2>
+        <app-contract-list></app-contract-list>
+      </div>
+     </div>
+    </mat-tab>
+    <mat-tab label="Create Contract">
+        To be finished
+    </mat-tab>
+    </mat-tab-group>
+
+    <mat-toolbar color="primary" class="bottom-nav">
+        <span class="spacer"></span>
+        <button mat-icon-button>
+            <mat-icon>home</mat-icon>
+        </button>
+        <button mat-icon-button>
+            <mat-icon>add</mat-icon>
+        </button>
+        <button mat-icon-button>
+            <mat-icon>account_circle</mat-icon>
+        </button>
+        <span class="spacer"></span>
+    </mat-toolbar>
 
 <ng-template #notAuthenticated>
     <p>Authentication failed. Please try again.</p>

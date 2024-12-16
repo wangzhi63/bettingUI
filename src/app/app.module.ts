@@ -12,8 +12,22 @@ import { LoginComponent } from './login/login.component';
 import { ContractListComponent } from './contract/contract-list/contract-list.component';
 import { ContractService } from './contract/contract.service';
 import { BidComponent } from './bid/bid.component';
-import { FormsModule } from '@angular/forms';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatButtonModule } from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { CreateContractComponent } from './contract/create-contract/create-contract.component'; 
+
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -26,7 +40,8 @@ const appRoutes: Routes = [
     HomeComponent,
     LoginComponent,
     ContractListComponent,
-    BidComponent
+    BidComponent,
+    CreateContractComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +49,17 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     OAuthModule.forRoot(),
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule,
+    MatFormFieldModule
   ],
   providers: [ContractService],
   bootstrap: [AppComponent]
