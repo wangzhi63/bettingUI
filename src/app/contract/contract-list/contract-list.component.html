@@ -1,8 +1,12 @@
-<div *ngFor="let contract of contracts">
+<div *ngFor="let contract of contractsWithBids">
 
     <p>Bid on: {{ contract.assertionText }}</p>
 
     <p>Expiring: {{ contract.endDate }}</p>
+
+    <p>Long: {{ contract.longAmount }}</p>
+    
+    <p>Short: {{ contract.shortAmount }}</p>
 
     <button [routerLink]="['/bid', contract.id]">Bid</button>
 </div>
