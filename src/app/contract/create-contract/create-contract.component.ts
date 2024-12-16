@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-create-contract',
   templateUrl: './create-contract.component.html',
-  styleUrls: ['./create-contract.component.css']
+  styleUrls: ['./create-contract.component.scss']
 })
 export class CreateContractComponent {
   contractForm: FormGroup;
