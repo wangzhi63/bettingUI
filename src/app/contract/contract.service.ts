@@ -22,4 +22,8 @@ export class ContractService {
     getContractsWithBids(): Observable<ContractWithBids[]> {
         return this.http.get<ContractWithBids[]>(this.withBidsURL);
     }
+
+    createContract(contract: Contract): Observable<Contract> {
+        return this.http.post<Contract>(this.apiUrl, contract);
+      }
 }

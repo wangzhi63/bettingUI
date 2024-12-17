@@ -1,8 +1,9 @@
 export interface Contract {
     id?: number;
-    title: string;
-    description: string;
+    title?: string;
+    description?: string;
     assertionText: string;
-    startDate: string;
-    endDate: string;
+    startDate: Date;
+    endDate: Date;
+    creatorId?: number;
 }
