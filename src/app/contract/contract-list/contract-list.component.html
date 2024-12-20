@@ -1,12 +1,13 @@
-<div *ngFor="let contract of contractsWithBids">
+<div *ngFor="let contract of contractsWithBids" class="contract-entry">
 
     <p>Bid on: {{ contract.assertionText }}</p>
 
     <p>Expiring: {{ contract.endDate }}</p>
 
-    <p>Long: ${{ contract.longAmount }} ({{contract.longCount}})</p>
-    
-    <p>Short: ${{ contract.shortAmount }} ({{contract.shortCount}})</p>
+    <div class="contract-row">
+        <p>Long: ${{ contract.longAmount }} ({{contract.longCount}})</p>
+        <p>Short: ${{ contract.shortAmount }} ({{contract.shortCount}})</p>
+    </div>
 
 
 
