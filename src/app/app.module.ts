@@ -28,6 +28,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { UserDashboardComponent } from './user/user-dashboard/user-dashboard.component';
+import { WalletComponent } from './wallet/wallet.component';
 
 
 const appRoutes: Routes = [
@@ -43,7 +44,8 @@ const appRoutes: Routes = [
     ContractListComponent,
     BidComponent,
     CreateContractComponent,
-    UserDashboardComponent
+    UserDashboardComponent,
+    WalletComponent
   ],
   imports: [
     BrowserModule,
