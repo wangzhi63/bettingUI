@@ -1,0 +1,26 @@
+/* user-dashboard.component.css */
+.user-dashboard {
+    padding: 20px;
+}
+
+.user-dashboard h2 {
+    margin-bottom: 20px;
+}
+
+.user-dashboard ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.user-dashboard li {
+    margin-bottom: 10px;
+}
+
+.user-dashboard a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.user-dashboard a:hover {
+    text-decoration: underline;
+}
