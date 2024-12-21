@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 
 
 interface Bid {
-    action: string;
+    action: string | null;
     amount: number | null;
     user_id: number | null;
     contract_id: number | null;
@@ -37,7 +37,11 @@ export class BidComponent implements OnInit {
       this.route.paramMap.subscribe(params => {
         const contractId = params.get('contract_id');
         if (contractId) {
-          this.bid.contract_id = Number(contractId); // Convert string to number
+          this.bid.contract_id = Number(contractId); 
+          // Convert string to number
+        }
+        if(params.get('action')){
+          this.bid.action = params.get('action');
         }
       });
     }

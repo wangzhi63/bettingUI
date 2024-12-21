@@ -11,7 +11,7 @@ import { WalletComponent } from './wallet/wallet.component';
 
 const routes: Routes = [
   { path: 'contracts', component: ContractListComponent },
-  { path: 'bid/:contract_id', component: BidComponent },
+  { path: 'bid/:contract_id/:action', component: BidComponent },
   { path: 'create-contract', component: CreateContractComponent },
   { path: 'user-dashboard', component: UserDashboardComponent },
   { path: 'wallet', component: WalletComponent },
