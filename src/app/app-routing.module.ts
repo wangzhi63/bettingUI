@@ -1,5 +1,3 @@
-
-
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BidComponent } from './bid/bid.component';
@@ -7,6 +5,7 @@ import { ContractListComponent } from './contract/contract-list/contract-list.co
 import { CreateContractComponent } from './contract/create-contract/create-contract.component';
 import { UserDashboardComponent } from './user/user-dashboard/user-dashboard.component';
 import { WalletComponent } from './wallet/wallet.component';
+import { PendingJudgementsComponent } from './pending-judgements/pending-judgements.component';
 
 
 const routes: Routes = [
@@ -15,6 +14,10 @@ const routes: Routes = [
   { path: 'create-contract', component: CreateContractComponent },
   { path: 'user-dashboard', component: UserDashboardComponent },
   { path: 'wallet', component: WalletComponent },
+  { 
+    path: 'pending-judgements', 
+    component: PendingJudgementsComponent,
+  },
 
 
 ];

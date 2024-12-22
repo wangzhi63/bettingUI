@@ -29,6 +29,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { UserDashboardComponent } from './user/user-dashboard/user-dashboard.component';
 import { WalletComponent } from './wallet/wallet.component';
+import { PendingJudgementsComponent } from './pending-judgements/pending-judgements.component';
 
 
 const appRoutes: Routes = [
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
     BidComponent,
     CreateContractComponent,
     UserDashboardComponent,
-    WalletComponent
+    WalletComponent,
+    PendingJudgementsComponent
   ],
   imports: [
     BrowserModule,
