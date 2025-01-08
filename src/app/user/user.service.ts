@@ -28,4 +28,12 @@ export class UserService {
     setUserInfo(userInfo: UserInfo): void {
         this.userInfoSubject.next(userInfo);
     }
+
+    getPendingJudgements(): Observable<any[]> {
+        return this.http.get<any[]>(`${this.apiUrl}/contracts/pending-judgements`);
+      }
+    
+    submitJudgement(contractId: number, verdict: boolean): Observable<any> {
+        return this.http.post(`${this.apiUrl}/contracts/${contractId}/judge`, { verdict });
+      }
 }
