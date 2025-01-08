@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let user of users" (click)="selectUser(user.id)">
+        {{ user.username }}
+    </li>
+</ul>

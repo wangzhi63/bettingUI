@@ -30,6 +30,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { UserDashboardComponent } from './user/user-dashboard/user-dashboard.component';
 import { WalletComponent } from './wallet/wallet.component';
 import { PendingJudgementsComponent } from './pending-judgements/pending-judgements.component';
+import { OrderComponent } from './order/order.component';
+import { UserListComponent } from './user/user-list/user-list.component';
+import { OrderService } from './services/order.service';
 
 
 const appRoutes: Routes = [
@@ -47,7 +50,9 @@ const appRoutes: Routes = [
     CreateContractComponent,
     UserDashboardComponent,
     WalletComponent,
-    PendingJudgementsComponent
+    PendingJudgementsComponent,
+    OrderComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +72,8 @@ const appRoutes: Routes = [
     MatNativeDateModule,
     MatFormFieldModule
   ],
-  providers: [ContractService],
+  providers: [ContractService,
+    OrderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

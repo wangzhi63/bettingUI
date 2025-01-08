@@ -10,8 +10,11 @@
     </div>
 
 
-    <div class="contract-row">
+    <!-- <div class="contract-row">
       <button [routerLink]="['/bid', contract.id, 'long']">Bid long</button>
       <button [routerLink]="['/bid', contract.id, 'short']">Bid short</button>
-    </div>
+    </div> -->
+
+    <button [routerLink]="['/order', contract.id]">Order</button>
+   
 </div>
