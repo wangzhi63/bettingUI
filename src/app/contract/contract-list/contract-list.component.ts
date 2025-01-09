@@ -19,7 +19,9 @@ export class ContractListComponent implements OnInit {
         // this.contractService.getContracts().subscribe((data: Contract[]) => {
         //     this.contracts = data;
         // });
-        this.contractService.getContractsWithBids().subscribe((data: ContractWithBids[]) => {
+        this.contractService.fetchContractsWithBids();
+        this.contractService.contractsWithBids$
+        .subscribe((data: ContractWithBids[]) => {
             this.contractsWithBids = data;
         });
     }

@@ -23,7 +23,7 @@ export class UserListComponent implements OnInit {
         orderData.buyerId = userId;
         this.orderService.createOrder(orderData).subscribe(() => {
             // Navigate to a confirmation page or back to the order form
-            this.router.navigate(['/order']);
+            this.router.navigate(['/']);
         });
     }
 }
