@@ -21,13 +21,13 @@ export class OrderComponent {
     });
     this.orderForm = this.fb.group({
       price: ['', Validators.required],
-      amount: ['', Validators.required]
+      quantity: ['', Validators.required]
     });
   }
 
   onSubmit() {
     if (this.orderForm.valid) {
-      const formData = {...this.orderForm.value, contractId: this.contractId};
+      const formData = {...this.orderForm.value, contractId: this.contractId, status:'PENDING'};
       this.orderService.setOrderData(formData);
       this.router.navigate(['/user-list']);
     }

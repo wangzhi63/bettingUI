@@ -11,7 +11,8 @@ export class OrderService {
     constructor(private http: HttpClient) { 
         const userId = localStorage.getItem('user_id');
         if (userId) {
-          this.orderData.sellerId = Number(userId); // Convert string to number
+          this.orderData.sellerId = Number(userId);
+          this.orderData.createdById = Number(userId); // Convert string to number
         } else {
           // Handle the case where user_id is not found in localStorage
           console.error('User ID not found in localStorage');
