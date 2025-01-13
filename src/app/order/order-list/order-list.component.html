@@ -1,26 +1,38 @@
 <div *ngIf="orders.length > 0">
     <h1>Proposed Orders</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Assertion</th>
-                <th>Proposer</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Contract</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let order of orders">
-                <td>{{order.assertionText}}</td>
-                <td>{{ order.sellerName }}</td>
-                <td>{{ order.price }}</td>
-                <td>{{ order.quantity }}</td>
+    <div class="filter-container">
+        <label for="statusFilter">Filter by status:</label>
+        <select id="statusFilter" [(ngModel)]="selectedStatus" (change)="onStatusChange(selectedStatus)">
+          <option value="ALL">All</option>
+          <option value="PENDING">Pending</option>
+          <option value="ACCEPTED">Accepted</option>
+          <option value="REJECTED">Rejected</option>
+        </select>
+      </div>
 
-            </tr> 
-        </tbody>
-    </table>
+      <div *ngIf="filteredOrders.length === 0" class="no-orders-message">
+        There are no orders under the status of {{ selectedStatus }}.
+      </div>
+<div *ngFor="let order of filteredOrders" class="order-card">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>{{ order.assertionText }}</mat-card-title>
+            <mat-card-subtitle>{{ order.sellerName }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+
+            <p><strong>Price:</strong> {{ order.price }}</p>
+            <p><strong>Quantity:</strong> {{ order.quantity }}</p>
+
+
+        </mat-card-content>
+        <mat-card-actions *ngIf="order.status === 'PENDING'">
+            <button mat-button color="primary" (click)="acceptOrder(order)">Accept</button>
+            <button mat-button color="warn" (click)="rejectOrder(order)">Reject</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
 </div>
 <div *ngIf="orders.length === 0">
     <p>No orders proposed to you.</p>
-</div><p>order-list works!</p>
+</div>

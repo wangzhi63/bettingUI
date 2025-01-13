@@ -40,4 +40,10 @@ export class OrderService {
     getOrdersForUser(buyerId: number): Observable<Order[]> {
         return this.http.get<Order[]>(`/api/orders/buyer/${buyerId}`);
       }
+
+    updateOrderStatus(orderId: number, status: string): Observable<any> {
+        return this.http.patch(`/api/orders/updateStatus/${orderId}`, status, {
+          headers: { 'Content-Type': 'application/json' }
+        });
+      }
 }

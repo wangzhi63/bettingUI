@@ -34,6 +34,7 @@ import { OrderComponent } from './order/order.component';
 import { UserListComponent } from './user/user-list/user-list.component';
 import { OrderService } from './services/order.service';
 import { OrderListComponent } from './order/order-list/order-list.component';
+import { MatCardModule } from '@angular/material/card';
 
 
 const appRoutes: Routes = [
@@ -72,7 +73,8 @@ const appRoutes: Routes = [
     MatDatepickerModule,
     MatInputModule,
     MatNativeDateModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatCardModule
   ],
   providers: [ContractService,
     OrderService],
