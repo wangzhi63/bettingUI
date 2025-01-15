@@ -30,7 +30,7 @@ export class UserService {
     }
 
     getPendingJudgements(): Observable<any[]> {
-        return this.http.get<any[]>(`${this.apiUrl}/contracts/pending-judgements`);
+        return this.http.get<any[]>(`/api/resolutions/pending`);
       }
     
     submitJudgement(contractId: number, verdict: boolean): Observable<any> {
