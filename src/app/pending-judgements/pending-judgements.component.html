@@ -16,8 +16,9 @@
     <div *ngIf="!loading && pendingContracts.length > 0" class="contracts-list">
       <div *ngFor="let contract of pendingContracts" class="contract-card">
         <h3>{{ contract.claim }}</h3>
-        <p>Created by: {{ contract.creator }}</p>
-        <p>Expiration: {{ contract.expirationDate | date }}</p>
+        <p>Assertion: {{ contract.assertionText }}</p>
+        <p>Created by: {{ contract.creatorName }}</p>
+        <p>Expiration: {{ contract.endDate | date }}</p>
         
         <div class="judgement-actions">
           <button (click)="submitJudgement(contract.id, true)" 

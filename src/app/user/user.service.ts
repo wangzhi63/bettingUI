@@ -34,7 +34,7 @@ export class UserService {
       }
     
     submitJudgement(contractId: number, verdict: boolean): Observable<any> {
-        return this.http.post(`${this.apiUrl}/contracts/${contractId}/judge`, { verdict });
+        return this.http.put(`/api/resolutions/decision/${contractId}`,  verdict );
       }
 
     getCurrentUser(): number | null {
